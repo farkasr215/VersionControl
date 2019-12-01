@@ -121,6 +121,9 @@
     <value>Hozzáadás</value>
   </data>
   <data name="FullName" xml:space="preserve">
-    <value>Vezetéknév + Keresztnév</value>
+    <value>Név</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Fájlba írás</value>
   </data>
 </root>
