@@ -21,6 +21,7 @@ namespace UserMaintenance
             label1.Text = Resource1.FullName; // label1
             button1.Text = Resource1.Add; // button1
             button2.Text = Resource1.Save;
+            button3.Text = Resource1.Delete;
             listBox1.DataSource = users;
             listBox1.ValueMember = "ID";
             listBox1.DisplayMember = "FullName";
@@ -58,7 +59,21 @@ namespace UserMaintenance
                 FullName = textBox1.Text,
             };
             users.Add(u);
-            Console.WriteLine(users);
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var s = listBox1.SelectedIndex;
+            for (int i = 0; i < users.Count; i++)
+            {
+                if (i == listBox1.SelectedIndex)
+                {
+                    users.Remove(users[i]);
+                }
+            }
+
+     
         }
     }
 }
